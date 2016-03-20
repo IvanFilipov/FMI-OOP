@@ -25,6 +25,10 @@ void Menu() {
 
 		cin >> option;
 		
+		
+		//взимаме следващия символ от потока 
+		//ако не е нов ред го връщаме обратно,
+		//така "почистваме" за да може cin.getline да работи нормално
 		char c;
 		cin.get(c);
 		if (!(c == '\n'))
@@ -107,6 +111,8 @@ void BestStudent() {
 	}
 
 
+        //четем един по един учениците от хранилището 
+        //и ако се налага обноваяваме най - добрият
 	while (File) {
 
 		File.read((char*)&CurBest, sizeof(Student));
@@ -159,7 +165,9 @@ void Add() {
 
 	cin >> ToAdd.mark;
 
-
+         //забележете кои флагове са вдигнати ,
+         //искаме да добавим новия запис , без да нарушаваме предните
+         //затова отваряме файла за писане в края
 	ofstream File(FILE_NAME, std::ios::binary|std::ios::app);
 
 	File.write((char*)&ToAdd, sizeof(Student));
@@ -179,14 +187,17 @@ void Report() {
 
 	Student curStudent;
 
+        //помощна структура 
+        //за да можем да пазим информация за всяко от четирите училища
+        //няма проблем структурата да бъде безименна
 	struct SchoolInfo{
 
-		double marks;
-		int cnt;
+		double marks; //поле за сумата от всички оценки
+		int cnt; //поле за броя на всички ученици
 
-	}schools[4];
+	}schools[4]; //масив представляващ 4рите училища
 
-
+//инициализираме масива
 	for (int i = 0; i < 4; i++) {
 
 		schools[i].cnt = 0;
@@ -204,8 +215,10 @@ void Report() {
 	while (File){
 
 		File.read((char*)(&curStudent), sizeof(Student));
-
+//ако текущото четене е било успешно взимаме предвид новата информация
 		if (File) {
+			
+			//curStudent.school - дава от 0 до 3 - индексите които използваме в масива
 			schools[curStudent.school].marks += curStudent.mark;
 			schools[curStudent.school].cnt++;
 		}
@@ -243,16 +256,20 @@ void Corrupt() {
 		return;
 	}
 
+//големината на целия файл в байтове
 	int len = 0;
 
 	File.seekg(0, std::ios::end);
 	len = File.tellg();
 	File.seekg(0, std::ios::beg);
 
+//броя на записите за ученици = вс байтове / големината на един ученик
 	int StCnt = len / sizeof(Student);
 
+//заделяме памет за всички ученици
 	Student *AllStudents = new Student[StCnt];
 
+//прочитаме ги
 	File.read((char*)AllStudents, sizeof(Student)*StCnt);
 
 	if (!File) {
@@ -263,6 +280,7 @@ void Corrupt() {
 
 	File.close();
 
+//манипулираме оценките в масива
 	for (int i = 0; i < StCnt; i++) {
 
 		if (AllStudents[i].school == SchoolIndex)
@@ -275,6 +293,7 @@ void Corrupt() {
 	}
 
 
+
 	ofstream ToWrite(FILE_NAME, std::ios::binary);
 
 	if (!ToWrite.is_open()) {
@@ -284,7 +303,8 @@ void Corrupt() {
 		return;
 
 	}
-
+	
+//записваме обратно новите данни за учениците
 	ToWrite.write((char*)AllStudents, sizeof(Student)*StCnt);
 
 	if (ToWrite)
