@@ -1,0 +1,25 @@
+1. revision of the first semester course - Introduction To Programming //24.02.2016
+ -bit operations
+ -pointers and dynamic memory
+ -recursion
+ 
+2.first classes for the new material //02.03.2016
+ - separate compiling - headers and .cpps
+ - reference
+ -structures
+ 
+3. //09.03.2016
+-more for structures
+-file streams - texture mode
+
+4. File streams //16.03.2016
+-flags 
+-binary mode
+-operations
+
+5.intruduction in Classes C++ style // 23.03.2016
+-private/public members
+-metoths
+-setters / getters
+-differences between structures and classes in c++
+
