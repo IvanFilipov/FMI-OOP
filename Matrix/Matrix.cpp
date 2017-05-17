@@ -1,4 +1,4 @@
-#include"Matirx.h"
+#include"Matrix.h"
 #include<iostream>
 #include<stdlib.h>
 #include<time.h>
