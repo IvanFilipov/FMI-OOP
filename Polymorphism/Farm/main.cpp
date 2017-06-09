@@ -21,7 +21,7 @@ int main() {
 	Farm copyFarm = myFarm;
 
 	std::cout << "\n a copy of myFarm sounds like :\n";
-	myFarm.AllSound();
+	copyFarm.AllSound();
 
 
 	return 0;
