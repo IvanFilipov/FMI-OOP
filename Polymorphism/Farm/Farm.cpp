@@ -13,9 +13,9 @@ Farm::Farm(const Farm& other){
 	for (int i = 0; i < other.size; i++) {
 
 		allAnimals[i] = other.allAnimals[i]->clone(); // each pointer will point to a
-													  //clone of the other object 
-													  //all pointer are Animal* , but the real	
-													  //allocated objects are Horse,Dog or Duck
+							      //clone of the other object 
+	            					      //all pointer are Animal* , but the real	
+		 					      //allocated objects are Horse,Dog or Duck
 	}
 
 	size = other.size;
@@ -51,7 +51,7 @@ void Farm::clear(){
 	for (int i = 0; i < size; i++)
 		delete allAnimals[i];
 
-	delete allAnimals;
+	delete[] allAnimals;
 	allAnimals = nullptr;
 	size = 0;
 
@@ -81,6 +81,6 @@ void Farm::AllSound(){
 
 	for (int i = 0; i < size; i++)
 		allAnimals[i]->MakeSound(); // using the polymorphism
-									//all animals will make their unique type of sound
+					    //all animals will make their unique type of sound
 
 }
