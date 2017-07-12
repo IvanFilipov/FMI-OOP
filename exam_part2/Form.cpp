@@ -94,7 +94,7 @@ void Form::CreateHtml(const char* fileName){
 		return;
 	}
 
-	ofs << "<!DOCTYPE html>\n<html>\n<body>\n"; //give by the task
+	ofs << "<!DOCTYPE html>\n<html>\n\t<body>\n\t\t<form>\n"; //give by the task
 
 
 	for (int i = 0; i < size; i++) {
@@ -104,7 +104,7 @@ void Form::CreateHtml(const char* fileName){
 
 	}
 
-	ofs << "</form>\n</body>\n</html>\n";
+	ofs << "\t\t</form>\n\t</body>\n\t</html>\n";
 
 	if (ofs)
 		std::cout << "successfully created !\n";
