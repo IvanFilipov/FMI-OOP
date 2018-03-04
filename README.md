@@ -19,7 +19,7 @@
                    за съдържанието на цялостното изложение + директни препратки към примерите
                    сързани с дадена тема
                             
-# FMI - DSA
+# FMI - OOP
 
 Some examples and source code druing the OOP (object oriented programming) courses at
 Faculty of Mathematics and Informatics at Sofia University
