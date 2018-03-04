@@ -1,4 +1,0 @@
-Alexsey clima,pc,navi 200 80
-Sheva tv,sensors,parktronic,handsfree 250 100
-Igor alarm,GPS,phone,xenon 500 200
-Vasilii dvd,stereo,sensors 300 150

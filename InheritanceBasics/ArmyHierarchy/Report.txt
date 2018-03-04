@@ -1,5 +1,0 @@
-this army belongs to Simeon
-it's description is : Together we are stronger !
-gold needed : 5432
-army power : 182
-average army combat skill level is : 20
