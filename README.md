@@ -4,11 +4,16 @@
 
                  
 ## Организация на хранилището :
-   * `/<тема>_pract/` - тук ще намерите базови примери,задачи и решения в рамките на дадена тема <тема>
-                        давани и решавани повреме на практикума
+   * `/<тема>_pract/` - тук ще намерите базови примери,задачи и решения в рамките на дадена <тема>
+                        задавани и решавани по време на практикума
                       
    * `/theoritical_examples/` - в тази директория са поместени теоритични примери
-                                разглеждани по време на семинарните заниятия
+                                разглеждани на семинарните заниятия
+                                
+   * `/projects/` - папка съдържаща по-комплексни задания, обединяващи по няколко от разглежданите теми.
+                    Тези задания са получавани на практикума и често изискват допълнително внимание от студентите,
+                    като предолагат допълнителна работа и влагане на въображение и проектантско мислене.
+                     
                          
    * `/exams/` - в тази поддиректория може да намерите условия и примерни решения на задачите давани
                  на  "Х-тото" контролно по избираемата дисциплина ООП - практикум
@@ -29,10 +34,12 @@ Faculty of Mathematics and Informatics at Sofia University
                          given as problems during practicum 
                      
    * `/theoritical_examples/` - examples from seminar exercises 
+   
+   * `/projects/` - a folder containing more complex examples, combining more than one theme  
                          
    * `/exams/` - tasks and solutions form the "X" numbered exam during the OOP - practicum course
    
    * `/IP_recap/` - some tasks and solutions as "Introduction to programming revision"
                      
-  * `schedule` - all the themes that are included + plan about when talking for them will be
+   * `schedule` - all the themes that are included + plan about when talking for them will be
                  and direct links to the code related with them
