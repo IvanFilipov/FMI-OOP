@@ -16,7 +16,7 @@
                      
                          
    * `/exams/` - в тази поддиректория може да намерите условия и примерни решения на задачите давани
-                 на "Х-тото" контролно по избираемата дисциплина ООП - практикум
+                 на "N-тото" контролно по избираемата дисциплина ООП - практикум
                      
    * `/IP_recap/` - папка, съдържаща задачи и техните решения като "преговор" на материала от УП
    
@@ -26,18 +26,18 @@
                             
 # FMI - OOP
 
-Some examples and source code druing the OOP (object oriented programming) courses at
+Some examples and source code during the OOP (object oriented programming) courses at
 Faculty of Mathematics and Informatics at Sofia University
                          
 ## repository organization :
-   * `/<topic>_pract/` - simple examples, tasks and solutions, separated by <topic>,
+   * `/<topic>_pract/` - simple examples, tasks and solutions, separated by "topic",
                          given as problems during practicum 
                      
    * `/theoritical_examples/` - examples from seminar exercises 
    
    * `/projects/` - a folder containing more complex examples, combining more than one theme  
                          
-   * `/exams/` - tasks and solutions form the "X" numbered exam during the OOP - practicum course
+   * `/exams/` - tasks and solutions from the "N" numbered exam during the OOP - practicum course
    
    * `/IP_recap/` - some tasks and solutions as "Introduction to programming revision"
                      
