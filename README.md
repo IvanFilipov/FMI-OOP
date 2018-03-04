@@ -10,10 +10,12 @@
    * `/theoritical_examples/` - в тази директория са поместени теоритични примери
                                 разглеждани по време на семинарните заниятия
                          
-   * `/exams/` - в тези поддиректории може да намерите условия и примерни решения на задачите давани
+   * `/exams/` - в тази поддиректория може да намерите условия и примерни решения на задачите давани
                  на  "Х-тото" контролно по избираемата дисциплина ООП - практикум
                      
-  * `разписание` - примерно разписание по седмици на обхванатите теми и допълнителна информация
+   * `/IP_recap/` - папка съдържаща задачи и техните решения като "преговор" на материала от УП
+   
+   * `разписание` - примерно разписание по седмици на обхванатите теми и допълнителна информация
                    за съдържанието на цялостното изложение + директни препратки към примерите
                    сързани с дадена тема
                             
@@ -29,6 +31,8 @@ Faculty of Mathematics and Informatics at Sofia University
    * `/theoritical_examples/` - examples from seminar exercises 
                          
    * `/exams/` - tasks and solutions form the "X" numbered exam during the OOP - practicum course
+   
+   * `/IP_recap/` - some tasks and solutions as "Introduction to programming revision"
                      
   * `schedule` - all the themes that are included + plan about when talking for them will be
                  and direct links to the code related with them
