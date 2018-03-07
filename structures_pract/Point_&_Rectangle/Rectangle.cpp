@@ -89,7 +89,7 @@ bool isValid(const Rect& rect){
 	if (rect.a.x < 0 || rect.a.y < 0)
 		return false;
 
-	if (rect.a.x < 0 || rect.b.y < 0)
+	if (rect.b.x < 0 || rect.b.y < 0)
 		return false;
 
 
