@@ -57,8 +57,9 @@ int main() {
 
 		//четем с getline , абсолютно аналогично на cin.getline
 		ifs.getline(buffer, MAXN);
-
-		std::cout << buffer;
+		
+		if(ifs)
+			std::cout << buffer;
 
 		memset(buffer, 0, MAXN);
 	}
