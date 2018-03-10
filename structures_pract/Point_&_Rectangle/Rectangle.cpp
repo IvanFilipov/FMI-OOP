@@ -121,60 +121,31 @@ bool isInside(const Point& pnt, const Rect& rect){
 }
 
 
-//за да сме сигурни ,че двата правоъгълника се пресичат
-//е достатъчно да знем ,че един от върховете на някой от двата правоъгълника се съдържа в другия
-//
-bool areInCollision(const Rect& first, const Rect& second){
+//The algorithm works by ensuring there is no gap between
+//any of the 4 sides of the rectangles
+//Any gap means a collision does not exist.
+//ref : https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+bool areInCollision(const Rect& first, const Rect& second) {
 
-	if (isInside(first.a, second))
-		return true;
+	Point firstTop, secondTop; //the closest to the right top points
 
-	if (isInside(first.b, second))
-		return true;
-	
-	//изчисляваме къде се намира точка D на първия правоъгълник
-	Point first_D;
+	unsigned int fWidth, fHeight, //width and height of both rectangles
+		sWidth, sHeight;
 
-	first_D.x = first.a.x;
-	first_D.y = first.b.y;
+	firstTop.x = min(first.a.x, first.b.x);
+	firstTop.y = min(first.a.y, first.b.y);
+	fWidth = abs(first.a.x - first.b.x);
+	fHeight = abs(first.a.y - first.b.y);
 
-	//провеяваме дали се съдържа във втория
-	if (isInside(first_D, second))
-		return true;
+	secondTop.x = min(second.a.x, second.b.x);
+	secondTop.y = min(second.a.y, second.b.y);
+	sWidth = abs(second.a.x - second.b.x);
+	sHeight = abs(second.a.y - second.b.y);
 
-	Point first_C;
+	// collision detected!
+	return (firstTop.x <= secondTop.x + sWidth &&
+		firstTop.x + fWidth >= secondTop.x &&
+		firstTop.y <= secondTop.y + sHeight &&
+		fHeight + firstTop.y >= secondTop.y);
 
-	first_C.x = first.b.x;
-	first_C.y = first.a.y;
-
-	if (isInside(first_C, second))
-		return true;
-
-
-	//for the second rectangle's points
-	if (isInside(second.a, first))
-		return true;
-
-	if (isInside(second.b, first))
-		return true;
-
-	Point second_D;
-
-	second_D.x = second.a.x;
-	second_D.y = second.b.y;
-
-	if (isInside(second_D, first))
-		return true;
-
-	Point second_C;
-
-	second_C.x = second.b.x;
-	second_C.y = second.a.y;
-
-	if (isInside(second_C, first))
-		return true;
-
-
-	//we have failed all the tests
-	return false;
 }
