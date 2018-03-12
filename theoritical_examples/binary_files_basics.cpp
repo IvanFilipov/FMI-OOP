@@ -45,7 +45,7 @@ bool writeStudents(const char* path) {
 
 	//нищо не ни пречи да ги запишем и всички наведнъж :
 	ofs.write((const char*)students, sizeof(students)); //students е началото на масива
-													//няма нужда от & за да вземем адреса
+							    //няма нужда от & за да вземем адреса
 
 	if (!ofs.good()) // проверяваме дали след операцията потокът е в невалидено състояние
 		return false;
