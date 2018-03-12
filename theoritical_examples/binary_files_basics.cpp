@@ -9,7 +9,7 @@ struct Student {
 
 //дава дължината на вече отворен файл
 //в режим за четене, връща get position-ът в началото на файла
-size_t getFileLen(std::ifstream& ifs) {
+size_t getFileLen(std::ifstream& ifs) { //можем да подаваме вече създаден поток на функции
 
 	ifs.seekg(0, std::ios::end); //местим се в края на файла
 	size_t size = ifs.tellg(); //взимаме текущата позиция
