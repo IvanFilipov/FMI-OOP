@@ -31,7 +31,7 @@ private:
 
 	bool canDestroy(unsigned int);
 
-	unsigned int destroyWithMinShots(unsigned int TargetLifePnts);
+	unsigned int destroyWithMinShots(unsigned int);
 
 	//interface
 public:
