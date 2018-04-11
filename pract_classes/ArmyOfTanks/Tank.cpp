@@ -6,7 +6,7 @@ Tank::Tank() :name(nullptr), shotPower(0), hitPoints(0) {
 	//...
 }
 
-Tank::Tank(const char* n, size_t sp = 0, size_t hp = 0) : shotPower(sp), hitPoints(hp) {
+Tank::Tank(const char* n, size_t sp, size_t hp) : shotPower(sp), hitPoints(hp) {
 
 	name = new char[strlen(n) + 1];
 	strcpy(name, n);
