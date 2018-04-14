@@ -40,7 +40,7 @@ public:
 		x = newX;
 	}
 
-	inline
+	inline //it is not necessary to have inline modificator here 
 	void setY(int);
 };
 
