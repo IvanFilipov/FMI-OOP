@@ -2,11 +2,16 @@
 #include"string.h"
 
 
-Tank::Tank() :name(nullptr), shotPower(0), hitPoints(0) {
+Tank::Tank() : name(nullptr), shotPower(0), hitPoints(0) {
 	//...
+	name = new char[1];
+	*name = '\0';
 }
 
 Tank::Tank(const char* n, size_t sp, size_t hp) : shotPower(sp), hitPoints(hp) {
+
+	if (n == nullptr)
+		throw std::invalid_argument("nullptr passed!");
 
 	name = new char[strlen(n) + 1];
 	strcpy(name, n);
