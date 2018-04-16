@@ -250,7 +250,7 @@ bool Army::deserialize(const char *fName) {
 
 			std::cout << "error reading\n";
 			clean();
-			return;
+			return false;
 		}
 	}
 
