@@ -97,6 +97,7 @@ void DynamicArray::pushBack(const int elem) {
 		while (--max_trys) {
 			
 			try {
+
 				resize(newCap);
 				break;
 			}
