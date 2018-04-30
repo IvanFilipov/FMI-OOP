@@ -39,8 +39,7 @@ Car::Car(const char* br, const char* md , int pr) :
 
 		allocateAndCopy(brand, br);
 		allocateAndCopy(model, md);
-	}
-	catch (std::bad_alloc& e) {
+	} catch (std::bad_alloc& e) {
 
 		std::cerr << e.what();
 		clear();

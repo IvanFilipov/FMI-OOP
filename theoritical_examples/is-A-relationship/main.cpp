@@ -69,11 +69,10 @@ int main(){
 	s1.tune(40);
 	s1.print();
 
-	try {
+ 	try {
 
 		s2.tune(200);
-	}
-	catch (std::logic_error& e) {
+	} catch (std::logic_error& e) {
 
 		std::cerr << e.what();
 	}

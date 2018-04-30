@@ -5,7 +5,6 @@
 
 const unsigned int SportCar::tuningLimit = 50;
 
-
 SportCar::SportCar() : horsePower(0) {
 
 	std::cout << "[ SportCar ctor working ] at 0x" << this << " ]\n";
@@ -13,7 +12,7 @@ SportCar::SportCar() : horsePower(0) {
 
 
 SportCar::SportCar(const char* br, const char* md , unsigned int pr, unsigned int hp )
-	: Car(br, md, pr) , horsePower(hp){
+	: Car(br, md, pr) , horsePower(hp) {
 
 	std::cout << "[ SportCar ctor with parameters working  at 0x" 
 		      << this <<  " ]\n";
