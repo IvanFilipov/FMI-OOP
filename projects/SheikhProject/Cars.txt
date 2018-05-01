@@ -1,0 +1,15 @@
+S Audi R8 200000 610 220
+L Bentley Continental 400000 parktronic,sensors,tv,dvd
+L Mercedes S-Class 170000 sensors,handsfree,navi
+S Lamborghini Aventador 560000 740 280
+L Rolls-Royce Phantom 300000 clima,tv,seatheater
+S Bugatti Chiron 3000000 1500 100
+S Ferrari LaFerrari 1800000 950 300
+L BWM 750 150000 fridge,clima,stereo
+L Audi A8L 160000 GPS,navi,alarm,leathersaloon
+L Cadillac Escalade 120000 partronik,xenon
+S Porsche 911 110000 370 210
+S Nissan GTR 140000 565 300
+S Subaru WRX-SIT 40000 300 350
+L GOLF GOLF-BACEEEE-GTI 2000 kakvarviNaVtora,megaSpoiler,nai-shumniqtAuspuh
+
