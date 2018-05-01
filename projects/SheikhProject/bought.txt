@@ -1,0 +1,84 @@
+
+  Brand : Audi
+  Model : R8
+  Price : 640000
+
+  HP: 830
+
+  Brand : Lamborghini
+  Model : Aventador
+  Price : 1120000
+
+  HP: 1020
+
+  Brand : Bugatti
+  Model : Chiron
+  Price : 3200000
+
+  HP: 1600
+
+  Brand : Ferrari
+  Model : LaFerrari
+  Price : 2400000
+
+  HP: 1250
+
+  Brand : Porsche
+  Model : 911
+  Price : 530000
+
+  HP: 580
+
+  Brand : Nissan
+  Model : GTR
+  Price : 740000
+
+  HP: 865
+
+  Brand : Subaru
+  Model : WRX-SIT
+  Price : 740000
+
+  HP: 650
+
+  Brand : Bentley
+  Model : Continental
+  Price : 412000
+
+ EXTRAS : parktronic,sensors,tv,dvd,handsfree
+
+  Brand : Mercedes
+  Model : S-Class
+  Price : 194000
+
+ EXTRAS : sensors,handsfree,navi,tv,parktronic
+
+  Brand : Rolls-Royce
+  Model : Phantom
+  Price : 336000
+
+ EXTRAS : clima,tv,seatheater,sensors,parktronic,handsfree
+
+  Brand : BWM
+  Model : 750
+  Price : 198000
+
+ EXTRAS : fridge,clima,stereo,tv,sensors,parktronic,handsfree
+
+  Brand : Audi
+  Model : A8L
+  Price : 208000
+
+ EXTRAS : GPS,navi,alarm,leathersaloon,tv,sensors,parktronic,handsfree
+
+  Brand : Cadillac
+  Model : Escalade
+  Price : 168000
+
+ EXTRAS : partronik,xenon,tv,sensors,parktronic,handsfree
+
+  Brand : GOLF
+  Model : GOLF-BACEEEE-GTI
+  Price : 50000
+
+ EXTRAS : kakvarviNaVtora,megaSpoiler,nai-shumniqtAuspuh,tv,sensors,parktronic,handsfree
