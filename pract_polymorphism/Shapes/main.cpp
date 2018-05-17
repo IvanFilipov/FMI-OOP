@@ -22,7 +22,7 @@ void creatVectorFromFile(FigureContainer& vec) {
 	}
 }
 
-void solveAtIndex(FigureContainer& vec){
+void solveAtIndex(const FigureContainer& vec){
 
 	int index;
 
@@ -55,7 +55,7 @@ void solveAtIndex(FigureContainer& vec){
 	std::cout << "none";
 }
 
-void solveIsThere(FigureContainer& vec){
+void solveIsThere(const FigureContainer& vec){
 
 	double x, y;
 
