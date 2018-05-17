@@ -2,7 +2,7 @@
 
 #include<fstream>
 
-//interface class, only abstract methods
+//interface class, only pure virtual methods
 class Figure {
 
 public:
