@@ -5,6 +5,7 @@
 
 int main() {
 
+
 	Rational r;
 	std::cout << "r = " << r << std::endl;
 
@@ -75,7 +76,27 @@ int main() {
 
 	if(r4 != r3)
 		std::cout << r4 << " != " << r3 << std::endl;
+	
+	Rational rat(10, 15);
+	std::cout << "rat = " << r << std::endl;
 
+	if (rat) //calls Rational::operator bool()
+		std::cout << "rat != 0\n";
+
+	rat = 0;
+
+	if (!rat)
+		std::cout << "rat == 0\n";
+	
+	Rational ra(10, 15);
+	
+	std::cout << "\n+ra = " << +ra << '\n'
+		<< "-ra = " << -ra << '\n';
+
+	ra = -ra;
+
+	std::cout << "+ra = " << +ra << '\n'
+		<< "-ra = " << -ra << '\n';
 
 	return 0;
 }

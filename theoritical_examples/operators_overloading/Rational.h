@@ -42,7 +42,7 @@ public:
 
 	//or could be member as well :
 	/*
-	bool operator<(const Rational&rhs) const{
+	bool operator<(const Rational& rhs) const{
 
 		Rational l = this->simplified();
 		Rational r = rhs.simplified();
@@ -58,15 +58,15 @@ public:
 	friend std::ostream& operator<<(std::ostream&, const Rational&);
 	friend std::istream& operator>>(std::istream&, Rational&);
 
-
 //type convert operators
 
 	//cast operators
 	//operator double()const;
-	double asDouble()const;
+	double asDouble() const;
 
-	//C++ way of creating predictable operator bool
-	//explicit operator bool() const;
+	//C++ 11 way of creating predictable operator bool
+	explicit operator bool() const;
+	bool operator!() const;
 
 //increment	- decrement operators
 
@@ -81,9 +81,8 @@ public:
 
 //arithmetic unary operators
 
-	//TODO
-	//Rational operator+() const;
-	//Rational operator-() const;
+	Rational operator+() const { return *this; }
+	Rational operator-() const { return Rational(-numerator, denominator); }
 };
 
 //outside operators realizations :

@@ -101,13 +101,23 @@ const Rational operator/(const Rational& lhs, const Rational& rhs) {
 	return Rational(lhs) /= rhs;
 }
 
-//Rational::operator double() const{
+//Rational::operator double() const {
 	//return (double)numerator / (double)denominator;
 //}
 
 double Rational::asDouble() const {
 
 	return static_cast<double>(numerator) / denominator;
+}
+
+Rational::operator bool() const {
+
+	return numerator != 0;
+}
+
+bool Rational::operator!() const {
+
+	return !this->operator bool();
 }
 
 Rational& Rational::operator++() { 
@@ -138,14 +148,13 @@ const Rational Rational::operator--(int) {
 	return temp;
 }
 
-std::ostream& operator<<(std::ostream& ofs, const Rational& r){
+std::ostream& operator<<(std::ostream& ofs, const Rational& r) {
 	
 	 return ofs << r.numerator << '/' 
 				<< r.denominator;
-
 }
 
-std::istream& operator>>(std::istream& ifs, Rational& r){
+std::istream& operator>>(std::istream& ifs, Rational& r) {
 	
 	return ifs >> r.numerator >> r.denominator;
 }
