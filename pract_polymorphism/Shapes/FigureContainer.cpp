@@ -10,7 +10,7 @@ FigureContainer::~FigureContainer() {
 	for (size_t i = 0; i < size; i++)
 		delete figures[i];
 
-	delete figures;
+	delete[] figures;
 }
 
 void FigureContainer::push_back(Figure* newFig) {
