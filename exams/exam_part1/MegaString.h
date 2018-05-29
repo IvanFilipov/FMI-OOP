@@ -2,7 +2,7 @@
 #include<iostream>
 
 //MegaString = MulString + GrString
-class MegaString{
+class MegaString {
 
 private:
 
@@ -25,25 +25,34 @@ public:
 	MegaString& operator /= (const MegaString&);
 
 	friend std::ostream& operator<<(std::ostream&, const MegaString&);
-	friend std::istream& operator>>(std::istream&, MegaString&);
+	friend std::istream& operator >> (std::istream&, MegaString&);
 
 
 public:
 
-	long GetW()const;
-	bool ContainSym(char)const;
+	long getW()const;
+	bool containSym(char)const;
 
 };
 
 
 const MegaString operator+(const MegaString&, const MegaString&);
 const MegaString operator*(const MegaString&, int);
-const MegaString operator*( int,const MegaString&);
+const MegaString operator*(int, const MegaString&);
 
 
 const MegaString operator/(const MegaString&, const MegaString&);
 const MegaString operator%(const MegaString&, const MegaString&);
 
-bool operator==(const MegaString&, const MegaString&);
-bool operator!=(const MegaString&, const MegaString&);
+inline
+bool operator==(const MegaString &lhs, const MegaString &rhs) {
+
+	return lhs.getW() == rhs.getW();
+}
+
+inline
+bool operator!=(const MegaString &lhs, const MegaString &rhs) {
+
+	return lhs.getW() != rhs.getW();
+}
 

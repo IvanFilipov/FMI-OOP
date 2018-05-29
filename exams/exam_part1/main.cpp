@@ -3,7 +3,6 @@
 
 int main() {
 
-	
 	std::cout << "***************************************\n\n"
 		<< "basic class tests : \n\n";
 
@@ -57,5 +56,4 @@ int main() {
 
 
 	return 0;
-
 }
