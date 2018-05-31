@@ -7,14 +7,13 @@ Nvector::Nvector() : data(nullptr), size(0) {
 
 // exception std::bad_alloc
 // if the function can not allocate memory
+Nvector::Nvector(const Nvector& other) {
 
-Nvector::Nvector(const Nvector& vec){
+	data = new double[other.size];
 
-	data = new double[vec.size];
+	memcpy(data, other.data, sizeof(double) * other.size);
 
-	memcpy(data, vec.data, sizeof(double) * vec.size);
-
-	size = vec.size;
+	size = other.size;
 }
 
 // exception std::bad_alloc
@@ -61,17 +60,17 @@ void Nvector::resize(size_t newSize) {
 
 // exception std::bad_alloc
 // if the function can not allocate memory
-Nvector& Nvector::operator=(const Nvector& vec){
+Nvector& Nvector::operator=(const Nvector& other) {
 
-	if (this == &vec)
+	if (this == &other)
 		return *this;
 
 	delete[] data;
-	size = vec.size;
+	size = other.size;
 
 	data = new double[size];
 
-	memcpy(data, vec.data, size * sizeof(double));
+	memcpy(data, other.data, size * sizeof(double));
 
 	return *this;
 }
@@ -91,53 +90,42 @@ double& Nvector::operator[](size_t pos) {
 }
 
 
-Nvector& Nvector::operator+=(const Nvector& vec) {
+Nvector& Nvector::operator+=(const Nvector& other) {
 
-	if (vec.size > size)
-		resize(vec.size);
+	if (other.size > size)
+		resize(other.size);
 
-		for (size_t i = 0; i < size; i++)
-			data[i] += vec.data[i];
+	for (size_t i = 0; i < size; i++)
+		data[i] += other.data[i];
 		
-
 	return *this;
 }
 
 
-Nvector Nvector::operator+(const Nvector& vec) const {
+Nvector Nvector::operator+(const Nvector& other) const {
 
 	Nvector vecSum(*this);
-
-	vecSum += vec;
+	vecSum += other;
 	
 	return vecSum;
 }
 
-Nvector& Nvector::operator-=(const Nvector& vec) {
+Nvector& Nvector::operator-=(const Nvector& other) {
 
-	if (vec.size > size){
+	if (other.size > size)
+		resize(other.size);
 
-		resize(vec.size);
-
-		for (size_t i = 0; i < size; i++)
-			data[i] -= vec.data[i];
-		
-
-	} else {
-
-		for (size_t i = 0; i < vec.size; i++)
-			data[i] -= vec.data[i];
-		
-	}
-
+	for (size_t i = 0; i < other.size; i++)
+		data[i] -= other.data[i];
+	
 	return *this;
 }
 
 
-Nvector Nvector::operator-(const Nvector& vec) const {
+Nvector Nvector::operator-(const Nvector& other) const {
 
 	Nvector vecSum(*this);
-	vecSum -= vec;
+	vecSum -= other;
 
 	return vecSum;
 }
@@ -151,7 +139,7 @@ Nvector& Nvector::operator*=(double scalar) {
 }
 
 
-Nvector Nvector::operator*(double scalar)const{
+Nvector Nvector::operator*(double scalar) const {
 
 	Nvector scalarVec(*this);
 	scalarVec *= scalar;
@@ -177,14 +165,14 @@ Nvector Nvector::operator/(double scalar) const {
 }
 
 
-double Nvector::operator%(const Nvector& vec) const {
+double Nvector::operator%(const Nvector& other) const {
 
-	size_t longer = (size > vec.size) ? vec.size : size;
+	size_t longer = (size > other.size) ? other.size : size;
 
 	double product = 0;
 
 	for (size_t i = 0; i < longer; i++)
-		product += data[i] * vec.data[i];
+		product += data[i] * other.data[i];
 	
 	return product;
 }

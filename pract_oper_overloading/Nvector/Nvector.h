@@ -4,7 +4,7 @@ class Nvector {
 
 private:
 
-	double * data;
+	double* data;
 	size_t size;
 
 public:
