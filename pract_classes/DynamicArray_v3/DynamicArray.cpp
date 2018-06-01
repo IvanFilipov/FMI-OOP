@@ -14,7 +14,7 @@ DynamicArray::DynamicArray() : pData(nullptr), curSize(0), capacity(0) {
 DynamicArray::DynamicArray(size_t size) : curSize(size), capacity(2 * size) {
 
    pData = new int[capacity];
-   memset(pData, 0, capacity);
+   memset(pData, 0, capacity * sizeof(int));
 }
 
 
@@ -37,7 +37,7 @@ void DynamicArray::copyFrom(const DynamicArray& other) {
 
 	pData = new int[other.capacity];
 
-	memcpy(pData, other.pData, other.curSize);
+	memcpy(pData, other.pData, other.curSize * sizeof(int));
 
 	//or
 	/*for (int i = 0; i < other.CurSize; i++) {
@@ -100,8 +100,7 @@ void DynamicArray::pushBack(const int elem) {
 
 				resize(newCap);
 				break;
-			}
-			catch (std::bad_alloc&) {
+			} catch (std::bad_alloc&) {
 
 				if (newCap <= capacity)
 					throw;

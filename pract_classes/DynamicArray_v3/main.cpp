@@ -36,8 +36,7 @@ int main() {
 	try {
 
 		std::cout << arr[150];
-	}
-	catch (std::exception& e) {
+	} catch (const std::exception& e) {
 
 		std::cerr << e.what() << std::endl;
 	}
@@ -46,8 +45,8 @@ int main() {
 
 		while (42)//non -stop popping back
 			arr.popBack();
-	}
-	catch (std::logic_error& le) {
+
+	} catch (const std::logic_error& le) {
 
 		std::cerr << le.what() << std::endl;
 	}
