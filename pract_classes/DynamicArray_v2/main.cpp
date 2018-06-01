@@ -34,18 +34,17 @@ int main() {
 	try {
 
 		arr.getAt(150);
-	}
-	catch (std::exception& e) {
+	} catch (std::exception& e) {
 
 		std::cerr << e.what() << std::endl;
 	}
 
 	try {
+
 		while (42) { //non -stop popping back
 			arr.popBack();
 		}
-	}
-	catch (std::logic_error& le) {
+	} catch (std::logic_error& le) {
 
 		std::cerr << le.what() << std::endl;
 	}
