@@ -131,10 +131,10 @@ Nvector<T>& Nvector<T>::operator=(const Nvector<T>& other) {
 
 template<typename T>
 const T& Nvector<T>::operator[](size_t pos) const {
-
+	//we can't resize here, because the object is "const"
 	if (pos >= size)
-		resize(pos + 1);
-
+		throw std::out_of_range("invalid index");
+		
 	return data[pos];
 }
 
@@ -173,7 +173,6 @@ Nvector<T>& Nvector<T>::operator-=(const Nvector<T>& other) {
 
 	if (other.size > size)
 		resize(other.size);
-
 		
 	for (size_t i = 0; i < other.size; i++)
 		data[i] -= other.data[i];
