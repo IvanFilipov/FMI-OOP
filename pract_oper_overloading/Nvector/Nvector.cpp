@@ -193,20 +193,11 @@ bool Nvector::operator||(const Nvector& other) const {
 	if (size != other.size) //we want the same dimensions
 		return false;
 
-
-	double coeff = data[0] / other.data[0];
-	double curCoeff;
-
-	const double eps = 0.00001;
-	
-	for (size_t i = 0; i < size; i++) {
-
-		curCoeff = data[i] / other.data[i];
-
-		if (abs(coeff - curCoeff) > eps)
+	for (size_t i = 0; i < size; i++)
+	{
+		if (lhs[i] * rhs[i + 1] != lhs[i + 1] * rhs[i])
 			return false;
 	}
-
 	return true;
 }
 
